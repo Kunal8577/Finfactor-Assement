@@ -1,0 +1,19 @@
+
+body { font-family: Inter, system-ui, Arial; margin:0; background:#f3f6fb }
+.app { max-width: 1000px; margin: 30px auto; padding: 16px }
+header h1 { margin:0; color:#1f2937 }
+.search-box { margin-top:20px }
+.search-box form { display:flex; gap:8px }
+.search-box input { flex:1; padding:8px; border-radius:6px; border:1px solid #cbd5e1 }
+.search-box button { padding:8px 12px; border-radius:6px; border:none; background:#2563eb; color:white }
+.card { display:flex; gap:20px; background:white; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(3,7,18,0.08); margin-top:16px }
+.card-left { width:240px; text-align:center }
+.card-left img { width:160px; height:160px; object-fit:contain }
+.types { margin-top:8px }
+.type { display:inline-block; padding:6px 8px; border-radius:12px; margin-right:6px; background:#e6eefc; text-transform:capitalize }
+.card-right h2 { margin:0 }
+.meta { color:#64748b; margin:8px 0 }
+.stats { list-style:none; padding:0; display:flex; gap:8px; flex-wrap:wrap }
+.moves .move { display:inline-block; padding:6px 8px; margin:4px; background:#f1f5f9; border-radius:6px }
+.loading { margin-top:12px }
+.error { margin-top:12px; color:crimson }

@@ -1,0 +1,186 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.pokemon-card {
+  --card-bg: linear-gradient(180deg,#ffffff,#fbfdff);
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(15,23,42,0.14), inset 0 1px 0 rgba(255,255,255,0.6);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  padding: 2.25rem 2.5rem;
+  align-items: start;
+  text-align: left;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms;
+}
+
+.pokemon-card .card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sprite-wrap {
+  width: 160px;
+  height: 160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, #f8fbff, #fff);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sprite { max-width: 140px; max-height: 140px; }
+.sprite.placeholder { width:140px; height:140px; background:#eee; border-radius:8px }
+
+.types { display:flex; gap:0.5rem; flex-wrap:wrap }
+.type {
+  background: linear-gradient(180deg,#fff,#fbfbff);
+  color:#0f172a;
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.95rem;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.03);
+  transition: transform 180ms, box-shadow 180ms;
+}
+
+.card-right .title { text-align:center; font-size:1.8rem; margin:0 0 0.2rem 0; letter-spacing:0.2px }
+.card-right .id { color:#64748b; font-weight:700; font-size:0.95rem }
+
+.meta { display:flex; gap:1rem; justify-content:center; color:#6b7280; margin:0.5rem 0 1rem }
+.meta span strong { color:#111827 }
+
+.two-col { display:flex; gap:2rem; margin-bottom:1.25rem }
+.section h3 { margin:0 0 0.5rem 0; text-align:left }
+.section ul { list-style:none; padding:0; margin:0 }
+.abilities li { padding:0.25rem 0 }
+.stats li { padding:0.25rem 0; font-size:0.95rem }
+.stat-name { color:#475569; margin-left:0.5rem }
+
+.moves { display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center }
+.move { background:#f1f5f9; padding:0.45rem 0.8rem; border-radius:8px; font-size:0.9rem; transition: transform 160ms, box-shadow 160ms }
+.move:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(2,6,23,0.06) }
+
+@media (max-width: 720px) {
+  .pokemon-card { grid-template-columns: 1fr; }
+  .meta { flex-direction:column; gap:0.3rem }
+  .two-col { flex-direction:column }
+}
+
+
+html,body { height:100%; }
+body {
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --bg-top: #f5f8ff;
+  --bg-bottom: #eef3fb;
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(96,165,250,0.06), transparent 12%), linear-gradient(180deg,var(--bg-top),var(--bg-bottom) 40%);
+  color:#0f172a;
+}
+
+.app { max-width:1100px; margin:40px auto; padding:0 20px }
+.app header { text-align:center; margin-bottom:1.25rem }
+.app header h1 { font-size:2.4rem; margin:0; color:#0f172a }
+
+.search-box { margin: 1rem 0 1.5rem; }
+.search-box form { display:flex; gap:0.75rem; align-items:center }
+.search-box input {
+  flex:1;
+  padding:0.9rem 1rem;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.08);
+  font-size:1rem;
+  background: #fff;
+}
+.search-box button {
+  padding:0.65rem 1rem;
+  background: linear-gradient(180deg,#2563eb,#1e40af);
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.18);
+  transition: transform 160ms, box-shadow 160ms;
+}
+.search-box button:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(30,64,175,0.18) }
+
+.loading, .error { margin-top:0.8rem; text-align:center }
+.error { color:#b91c1c }
+
+
+.pokemon-card { max-width:100%; }
+.card { margin: 1rem 0; }
+
+
+.type.fire { background: linear-gradient(180deg,#fff3ed,#ffefde); color:#9b2c17; border-color: rgba(249,115,22,0.08); }
+.type.flying { background: linear-gradient(180deg,#eef6ff,#f8fbff); color:#0f172a; border-color: rgba(96,165,250,0.08); }
+
+.type.grass { background: linear-gradient(180deg,#eefdd8,#f6fff0); color:#14532d }
+.type.water { background: linear-gradient(180deg,#e6f2ff,#f7fbff); color:#0b5dd7 }
+.type.electric { background: linear-gradient(180deg,#fffbe6,#fffef6); color:#92400e }
+.type.rock { background: linear-gradient(180deg,#faf7ed,#fffdf8); color:#59331a }
+.type.dragon { background: linear-gradient(180deg,#f0efff,#fbfaff); color:#312e81 }
+.type.ghost { background: linear-gradient(180deg,#f5f3ff,#fcfbff); color:#5b21b6 }
+.type.ice { background: linear-gradient(180deg,#f0fcff,#f5fdff); color:#075985 }
+.type.poison { background: linear-gradient(180deg,#fcf0ff,#fffaff); color:#7c2d8b }
+.type.fighting { background: linear-gradient(180deg,#fff3f1,#fff9f8); color:#831843 }
+.type.psychic { background: linear-gradient(180deg,#fff0f6,#fffafd); color:#9f1239 }
+.type.bug { background: linear-gradient(180deg,#f7fff0,#fbfff6); color:#3f6212 }
+.type.normal { background: linear-gradient(180deg,#fcfcfb,#ffffff); color:#111827 }
+.type.steel { background: linear-gradient(180deg,#f6f7fb,#fcfdff); color:#0f172a }
+.type.ground { background: linear-gradient(180deg,#fff7ed,#fffbf7); color:#6b2d00 }
+.type.fairy { background: linear-gradient(180deg,#fff5fb,#fffafd); color:#831843 }
+
+
+.pokemon-card:hover { transform: translateY(-6px); box-shadow: 0 28px 60px rgba(15,23,42,0.18) }
+
+
+@keyframes bob { 0% { transform: translateY(0) } 50% { transform: translateY(-6px) } 100% { transform: translateY(0) } }
+.sprite { will-change: transform; animation: bob 6s ease-in-out infinite }
